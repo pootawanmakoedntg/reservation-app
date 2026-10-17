@@ -12,11 +12,9 @@ st.set_page_config(page_title="แปลงใบขอเบิกเป็น 
 st.title("📄 ระบบแปลงใบขอเบิก (Reservation) เป็น Excel")
 st.write("อัปโหลดรูปภาพใบขอเบิก ระบบจะอ่านข้อมูลและสร้างไฟล์ Excel ให้คุณดาวน์โหลดได้ทันที")
 
-with st.sidebar:
-    st.header("🔑 ตั้งค่าระบบ")
-    api_key_input = st.text_input("ใส่ Gemini API Key ของคุณ:", type="password")
-    st.markdown("[วิธีขอ API Key ฟรีคลิกที่นี่](https://aistudio.google.com/)")
-    st.info("💡 โควตาฟรีใช้งานได้ประมาณ 250 ครั้งต่อวัน")
+API_KEY_FIXED = "AQ.Ab8RN6IMrLQCS0hCIyr4yKaAY1oTn9vzmERBv8CbWc_qQE7DeA" 
+genai.configure(api_key=API_KEY_FIXED)
+model = genai.GenerativeModel("gemini-3.8-flash")
 
 uploaded_file = st.file_uploader("เลือกรูปภาพใบขอเบิก (JPG, PNG)", type=["jpg", "jpeg", "png"])
 
