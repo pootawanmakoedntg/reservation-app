@@ -8,7 +8,7 @@ from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
 from openpyxl.utils import get_column_letter
 
 # ฝัง API Key เรียบร้อย ไม่ต้องกรอกหน้าเว็บ
-API_KEY_FIXED = "AQ.Ab8RN6IMrLQCS0hCIyr4yKaAY1oTn9vzmERBv8CbWc_qQE7DeA"
+API_KEY_FIXED = "AQ.Ab8RN6LxMuLYzwSUgT30CPGvmXbmZFiFKBldT1bz8Rfr59LaTA"
 genai.configure(api_key=API_KEY_FIXED)
 
 st.set_page_config(page_title="แปลงใบขอเบิกเป็น Excel", page_icon="📄", layout="centered")
